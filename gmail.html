@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="gmail" placeholder="enter your mail" id="mail">
+    <button id="btn">click</button>
+    <h1 id="res"></h1>
+    <script>
+        document.getElementById("btn").onclick = function(){
+            var a = document.getElementById("mail").value;
+            var email_R = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if(email_R.test(a)){
+                document.getElementById("res").textContent = "The input is a valid email format";
+            }else{
+                document.getElementById("res").textContent = "The input is a not valid email format";
+            }
+            document.getElementById("mail").value="";
+        }
+    </script>
+    
+</body>
+</html>

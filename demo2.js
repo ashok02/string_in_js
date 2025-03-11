@@ -253,6 +253,18 @@ Case-sensitive.
 
 
 
+In JavaScript, template literals are a way to create strings that offer more flexibility and readability
+ compared to traditional string literals. They are enclosed by backticks (`) 
+instead of single or double quotes and allow embedding expressions, multi-line strings, and more.
+
+        let name = "Ashok";
+        let age = 25;
+        let message = `Hello, my name is ${name} and I am ${age} years old.`;
+        console.log(message); // "Hello, my name is Ashok and I am 25 years old."
+
+
+
+
 
 
 

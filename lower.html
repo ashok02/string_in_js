@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Example</title>
+</head>
+<body>
+    <input type="text" id="str" placeholder="enter the string" name="string1">
+    <button id="btn">click me</button>
+    <h1 id="data"></h1>
+
+    <script>
+        
+        document.getElementById("btn").onclick = function(){
+
+        var data1 = document.getElementById("str").value.toLowerCase();
+      
+
+        document.getElementById("data").textContent = data1;
+
+        document.getElementById("str").value=" ";
+
+        }
+       
+        
+    </script>
+</body>
+</html>

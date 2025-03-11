@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="letter" placeholder="enter the char" id="char1">
+    <button id="btn">find char</button>
+    <h1 id="res"></h1>
+    <script>
+        document.getElementById("btn").onclick = function(){
+            var a = document.getElementById("char1").value.toLowerCase();
+
+
+            if (a >= 'a' && a <= 'z') { // Check if input is a valid alphabet
+                var prevChar = a === 'a' ? 'z' : String.fromCharCode(a.charCodeAt(0) - 1); // Find previous character
+                document.getElementById("res").textContent = "The previous alphabet is: " + prevChar;
+            } else {
+                document.getElementById("res").textContent = "Please enter a valid alphabet.";
+            }
+            document.getElementById("char1").value = "";
+
+        }
+    </script>
+</body>
+</html>

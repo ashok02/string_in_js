@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="number" id="str1" placeholder="enter the number">
+    <button id="btn">check</button>
+    <h1 id="res"></h1>
+    <script>
+        document.getElementById("btn").onclick = function(){
+            var str1 = document.getElementById("str1").value;
+            var rev_str = str1.split("").reverse().join("");
+
+            if(str1 == rev_str){
+                document.getElementById("res").textContent = "The number is a palindrome";
+            }else{
+                document.getElementById("res").textContent = "The number is not a palindrome"
+            }
+
+            document.getElementById("str1").value=""
+
+        }
+    </script>
+</body>
+</html>
